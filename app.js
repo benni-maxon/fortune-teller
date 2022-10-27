@@ -4,6 +4,7 @@ const anotherBtn = document.getElementById('another');
 const promptSection = document.getElementById('prompt');
 const fortuneSection = document.getElementById('fortune');
 const answerP = document.getElementById('answer');
+const questionField = document.getElementById('question-field');
 
 /* Events */
 const answers = [
@@ -40,6 +41,7 @@ inquireBtn.addEventListener('click', () => {
     const randomChoice = answers[randInt];
 
     answerP.textContent = randomChoice;
+    questionField.value = '';
 });
 
 anotherBtn.addEventListener('click', toggleSections);
